@@ -11,8 +11,9 @@
 
 with open('WWAF1.rtf', 'r') as f:
     for index, line in enumerate(f):
-        if index % 2 == 0:
+        if index % 2 == 2:
             print(line)
+            #remember, because of 0-based numbering system, == 0 will output odd lines
 
 #an alternative way of printing every other line - need to explore the false line a bit more
 f = open('WWAF1.rtf', 'r')
