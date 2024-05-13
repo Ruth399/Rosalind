@@ -14,8 +14,16 @@ round(4.783020712, digits = 1)
 
 #help.search(chisq.test()) - the help.search() function can help finding functions
 
-name <- "Ruth Legesse"
+
 
 date <- 12052024
 
+library(datasets)
+
+abs(-17)
+
+name <- "Ruth Legesse"
+
 name
+
+date
