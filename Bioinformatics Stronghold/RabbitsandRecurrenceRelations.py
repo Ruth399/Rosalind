@@ -1,5 +1,5 @@
 #let n be the number of months 
-n = 5
+n = 30
 #let k be the number of pairs of offspring each rabbit pair produces 
 k = 3
 
@@ -12,6 +12,22 @@ for months in range(1, n-1):
     twogen = onegen
     onegen = nextgen 
 print(onegen)
+
+def rabbit_pairs(num_months, num_offspring):
+    if num_months == 1:
+        return 1
+    elif num_months == 2:
+        return num_offspring
+    
+    one_gen = rabbit_pairs(num_months - 1, num_offspring)
+    two_gen = rabbit_pairs(num_months - 2, num_offspring)
+    
+    return one_gen + (two_gen * num_offspring)
+
+# Example usage
+num_months = 5
+num_offspring = 3
+print(rabbit_pairs(num_months, num_offspring))
 
 
 #def months():
