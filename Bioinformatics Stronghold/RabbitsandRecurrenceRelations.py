@@ -3,20 +3,31 @@ n = 5
 #let k be the number of pairs of offspring each rabbit pair produces 
 k = 3
 
-def months():
+onegen = 1
 
-def offspring():
+twogen = 1
+
+for months in range(1, n-1):
+    nextgen = onegen + twogen * k 
+    twogen = onegen
+    onegen = nextgen 
+print(onegen)
+
+
+#def months():
+
+#def offspring():
+
+
+
+#def rabbitpairs(int(months), int(offspring)):
+ ##  # if months == 1:
+      #  return 1
+       # return offspring
+   ## elif months == 2:
     
-
-
-def rabbitpairs(int(months), int(offspring)):
-    if months == 1:
-        return 1
-    elif months == 2:
-        return offspring
-    
-onegen = rabbitpairs(months - 1, offspring)
-twogen = rabbitpairs(months - 2, offspring)
+#onegen = rabbitpairs(months - 1, offspring)
+#twogen = rabbitpairs(months - 2, offspring)
 
 
 #int (rabbitpairs(int months, int offspring)
