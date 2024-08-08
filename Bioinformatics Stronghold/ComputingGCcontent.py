@@ -39,9 +39,15 @@ GC_content_0808 = ((GC_total_0808/total_0808)*100)
 
 #print("Rosalind_0808 GC content is:", ((GC_total_0808/total_0808)*100))
 
-GC_contents = [GC_content_6464, GC_content_5959, GC_content_0808]
-GC_contents.sort()
-print(GC_contents)
+GC_contents = [("GC_content_6464",GC_content_6464), ("GC_content_5959",GC_content_5959), ("GC_content_0808",GC_content_0808)] #tuple containing var name & var value
+sorted_GC_contents = sorted(variables, key=lambda x: x[1])  # Sort by the second element in each tuple (the value)
+
+for name, value in sorted_GC_contents:
+    print(f"{name}: {value}")
+
+
+#GC_contents.sort() -> alternative way of sorting, not the best in this scenario, as i want to return the values with their assigned dna string
+#print(GC_contents)
 
 
 
