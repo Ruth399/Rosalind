@@ -54,8 +54,11 @@ print(GC_contents)
 #second attempt
 
 f = open("/Users/Pete_the_Meme/Desktop/rosalind_gc.txt", "r") #obtained file directory by pressing option once selected file
-print(f.readline())
-print(f.readline())
+#remember to close file once opened - this can also be done by using with statement
+
+with open("/Users/Pete_the_Meme/Desktop/rosalind_gc.txt", "r") as file:
+    DNA_bases = file.read().replace("\n", "")
+    print(DNA_bases) #DNA_bases contains a string, and the .readline() object cannot be attributed to it
 
 
 
