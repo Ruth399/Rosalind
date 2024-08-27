@@ -67,7 +67,7 @@ dna_dictionary = {}
 for entry in entries:
     identifier = entry.split()[0]
     sequence = entry[len(identifier):]
-    dna_dictionary = sequence 
+    dna_dictionary[identifier] = sequence 
 
 for key, value in dna_dictionary.items():
     print(f"{key}: {value[:50]}...")
