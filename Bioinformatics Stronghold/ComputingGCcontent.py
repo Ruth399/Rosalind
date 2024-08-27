@@ -72,6 +72,20 @@ for entry in entries:
 for key, value in dna_dictionary.items():
     print(f"{key}: {value[:50]}...")
 
+def calculate_gc_content(dna_sequence):
+    gc_count = dna_sequence.count('G') + dna_sequence.count('C')
+    total_count = len(dna_sequence)
+    gc_content = (gc_count / total_count) * 100
+    return gc_content
+
+gc_contents = {identifier: calculate_gc_content(sequence) for identifier, sequence in dna_dictionary.items()}
+
+sorted_gc_contents = sorted(gc_contents.items(), key = lambda x: x[1], reverse = True)
+
+for identifer, gc_content in sorted_gc_contents:
+    print(f"{identifier}: {gc_content:.2f}%")
+
+
 
 
 
