@@ -58,8 +58,19 @@ f = open("/Users/Pete_the_Meme/Desktop/rosalind_gc.txt", "r") #obtained file dir
 
 with open("/Users/Pete_the_Meme/Desktop/rosalind_gc.txt", "r") as file:
     DNA_bases = file.read().replace("\n", "")
-    print(DNA_bases) #DNA_bases contains a string, and the .readline() object cannot be attributed to it
+    #print(DNA_bases) #DNA_bases contains a string, and the .readline() object cannot be attributed to it
 
+entries = DNA_bases.split('>')[1:]
+
+dna_dictionary = {}
+
+for entry in entries:
+    identifier = entry.split()[0]
+    sequence = entry[len(identifier):]
+    dna_dictionary = sequence 
+
+for key, value in dna_dictionary.items():
+    print(f"{key}: {value[:50]}...")
 
 
 
