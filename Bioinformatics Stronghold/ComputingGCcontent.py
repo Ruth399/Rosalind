@@ -53,10 +53,10 @@ print(GC_contents)
 #not very effective code 
 #second attempt
 
-f = open("/Users/Pete_the_Meme/Desktop/rosalind_gc.txt", "r") #obtained file directory by pressing option once selected file
+f = open("/Users/Ruth Legesse/Desktop/rosalind_gc.txt", "r") #obtained file directory by pressing option once selected file
 #remember to close file once opened - this can also be done by using with statement
 
-with open("/Users/Pete_the_Meme/Desktop/rosalind_gc.txt", "r") as file:
+with open("/Users/Ruth Legesse/Desktop/rosalind_gc.txt", "r") as file:
     DNA_bases = file.read().replace("\n", "")
     #print(DNA_bases) #DNA_bases contains a string, and the .readline() object cannot be attributed to it
 
@@ -84,6 +84,7 @@ sorted_gc_contents = sorted(gc_contents.items(), key = lambda x: x[1], reverse =
 
 for identifer, gc_content in sorted_gc_contents:
     print(f"{identifier}: {gc_content:.2f}%")
+
 
 
 
