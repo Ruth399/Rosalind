@@ -65,14 +65,17 @@ entries = DNA_bases.split('>')[1:]
 dna_dictionary = {}
 
 for entry in entries:
-    identifier = entry.split()[0]
-    sequence = entry[len(identifier):]
+    parts = entry.split()
+    identifier = parts[0]
+    sequence = ''.join(parts[1:])
     dna_dictionary[identifier] = sequence 
 
 for key, value in dna_dictionary.items():
     print(f"{key}: {value[:50]}...")
 
 def calculate_gc_content(dna_sequence):
+    if len(dna_sequence) == 0:
+        return 0.0
     gc_count = dna_sequence.count('G') + dna_sequence.count('C')
     total_count = len(dna_sequence)
     gc_content = (gc_count / total_count) * 100
