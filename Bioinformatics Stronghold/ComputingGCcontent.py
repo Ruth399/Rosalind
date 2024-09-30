@@ -57,7 +57,7 @@ f = open("/Users/Ruth Legesse/Desktop/rosalind_gc.txt", "r") #obtained file dire
 #remember to close file once opened - this can also be done by using with statement
 
 with open("/Users/Ruth Legesse/Desktop/rosalind_gc.txt", "r") as file:
-    DNA_bases = file.read().replace("\n", "")
+    DNA_bases = file.read()#.replace("\n", "")
     #print(DNA_bases) #DNA_bases contains a string, and the .readline() object cannot be attributed to it
 
 entries = DNA_bases.split('>')[1:]
@@ -65,13 +65,15 @@ entries = DNA_bases.split('>')[1:]
 dna_dictionary = {}
 
 for entry in entries:
-    parts = entry.split()
-    identifier = parts[0]
-    sequence = ''.join(parts[1:])
-    dna_dictionary[identifier] = sequence 
+    lines = entry.strip().splitlines()  
+    identifier = lines[0]  
+    sequence = ''.join(lines[1:])  
+    dna_dictionary[identifier] = sequence
 
-for key, value in dna_dictionary.items():
-    print(f"{key}: {value[:50]}...")
+#print(entries)
+
+#for key, value in dna_dictionary.items():
+    #print(f"{key}: {value[:50]}...")
 
 def calculate_gc_content(dna_sequence):
     if len(dna_sequence) == 0:
