@@ -1,0 +1,22 @@
+CLUSTAL multiple sequence alignment by MUSCLE (3.8)
+
+
+WT_IL1R1           GTCATCTGCAAATGAAATTGATGTTCGTCCCTGTCCTCTTAACCCAAATGAACACAAAGG
+Mutated_IL1R1      GTCATCTGCAAATGAAATTGATGTTCGTCCCTGTCCTCTTAACCCAAATGAACACAAAGG
+                   ************************************************************
+
+WT_IL1R1           CACTATAACTTGGTATAAAGATGACAGCAAGACACCTGTATCTACAGAACAAGCCTCCAG
+Mutated_IL1R1      CACTATAACTTGGTATAAAGATGACAGCAAGACACCTGTATCTACA--------------
+                   **********************************************              
+
+WT_IL1R1           GATTCATCAACACAAAGAGAAACTTTGGTTTGTTCCTGCTAAGGTGGAGGATTCAGGACA
+Mutated_IL1R1      ---TCATCAACACAAAGAGAAACTTTGGTTTGTTCCTGCTAAGGTGGAGGATTCAGGACA
+                      *********************************************************
+
+WT_IL1R1           TTACTATTGCGTGGTAAG------------------------------------------
+Mutated_IL1R1      TTACTATTGCGTGGTAAGGTAAGAGAGGAATTAGTATGTTACAAACATGTTCTAGTTTCC
+                   ******************                                          
+
+WT_IL1R1           -----------------------------------------
+Mutated_IL1R1      TGCAGTTGTTAAGGACAGAAATACTTTTAATAATGCTTAAC
+                                                            
